@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #FAF9F8;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.bodySection{
+    display: flex;
+}
+header{
+    background-color:#2564CF;
+    padding: 0;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3%;
+    align-items: center;
+
+}
+.navBar p{
+    font-size: 16px;
+    line-height: 48px;
+    color: #fff;
+    font-weight: bold;
+}
+h4{
+   font-size: 14px;
+   line-height: 20px;
+   color: #292827; 
+   font-weight: 380;
+}
+#mainH4{
+    font-size: 20px;
+    line-height: 16.7px;
+    font-weight: 500;
+}
+hr{
+    color: #E1DFDD;
+
+}
+.search{
+    position: relative;
+    width: 400px;
+    /* background-color: aqua; */
+
+}
+.search input{
+    width: 100%;
+    /* padding: 10px 10px 10px 40px; */
+    padding: 3px 10px 3px 40px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.search i{
+    position: absolute;
+    left: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color:#2564CF;
+}
+.otherIcons{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+.otherIcons i {
+    color: #fff;
+    opacity: 0.9;
+}
+/* SIDE BAR */
+.bar i{
+    margin-top: 10%;
+    opacity: 0.7;
+}
+ .sun i , .important i , .calendar i , .user i , .house i{
+    opacity: 0.6;
+    
+    
+}
+.new{
+    align-items: center;
+}
+.new i{
+    color:#2564CF;
+    font-weight: lighter;
+}
+.new p{
+    color:#2564CF;
+    font-weight: light;
+
+}
+.square i{
+    color:#2564CF;
+    
+}
+.sideBar{
+    background: #fff;
+    height: 100vh;
+    width: 290px;
+    position: relative;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 20px;
+    gap: 10px;
+}
+.sun , .important , .plan , .assign , .tasks{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    height: 20px;
+    /* padding: 5px; */
+  
+} 
+.sun:hover , .important:hover , .plan:hover , .assign:hover , .tasks:hover{
+    background: #FAF9F8;
+    cursor: pointer;
+
+}
+.bluePart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+.new{
+   display: flex;
+   gap: 20px; 
+}
+.bottomIcons{
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+
+/* MAIN PAGE */
+.dayMainPage{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.twoDivs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 30px;
+  
+    width: 80vw;
+ 
+    
+}
+.firstDiv , .secondDiv{
+    display: flex;
+    gap:20px;
+}
+.list , .arrows , .group ,.suggestion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; ;
+}
+.twoParts{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+    gap: 3px;
+}
+.input input{
+    width: 100%;
+    padding:15px 10px ;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    
+}
+.threeIcons{
+    display: flex;
+    gap: 15px;
+    
+}
+
+
+.inputTwo{
+  
+    padding:15px 10px ;
+    background-color: #FAF9F8;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+/* MY DAY */
+
+#myDayContent{
+    display: flex;
+}
+
+ /* MAIN PAGE IMPORTANT  */
+
+ #importantContent h4 , #importantContent p , #secondStar,#secondEllipsis ,#secondList , #secondArrow , #secondCalendar ,#secondUser, #secondHouse , #plannedContent p , #plannedContent h4{
+    color:#2564CF;
+
+ }
+ #greenUser , #greenEllipsis , #greenList , #assignedContent h4,  #assignedContent p {
+    color: #457e21;
+
+ }
+ 
