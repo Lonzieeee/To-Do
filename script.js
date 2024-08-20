@@ -36,15 +36,42 @@ document.querySelector('.assign').addEventListener('click', function () {
 
 });
 document.querySelector('.tasks').addEventListener('click', function () {
+    // console.log('Tasks clicked');
     showSection('taskContent');
 
 });
+// HIDING THE PLACEHOLDER
+const searchInput = document.getElementById('searchInput');
+
+    
+    searchInput.addEventListener('focus', function() {
+        searchInput.setAttribute('placeholder', 'search');
+    });
+
+    searchInput.addEventListener('blur', function() {
+        searchInput.removeAttribute('placeholder');
+
+
+
+
+    });
+
+
+    // SIDE BAR FUNCTIONALITY
+    const barIcon = document.querySelector('.bar i');    // Selects the sidebar toogle button
+    const sideBar = document.querySelector('.sideBar');  // Selects the whole sidebar
+    const mainContent = document.querySelectorAll('.dayMainPage'); // Select all main content sections
+
+    barIcon.addEventListener('click', function() {
+        sideBar.classList.toggle('collapsed');
+
+        // Toggle the expanded class on all main content sections
+        mainContent.forEach(function(content) {
+            content.classList.toggle('expanded');
+        });
+    });
 
 
 });
 
 
-
-
-
-   

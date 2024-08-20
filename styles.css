@@ -12,6 +12,7 @@
 body{
     background: #FAF9F8;
     font-family: "Segoe UI", Arial, sans-serif;
+    overflow-y: hidden;
 }
 .bodySection{
     display: flex;
@@ -58,10 +59,12 @@ hr{
     width: 100%;
     /* padding: 10px 10px 10px 40px; */
     padding: 3px 10px 3px 40px;
-    font-size: 18px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-weight: 350;
+    outline: none;
 }
 .search i{
     position: absolute;
@@ -70,6 +73,15 @@ hr{
     transform: translateY(-50%);
     font-size: 15px;
     color:#2564CF;
+}
+.search input::placeholder{
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+}
+.search input:focus::placeholder{
+    opacity: 1;
+
 }
 .otherIcons{
     display: flex;
@@ -82,8 +94,21 @@ hr{
     opacity: 0.9;
 }
 /* SIDE BAR */
+.bar{
+    position: absolute;
+    top: 66px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
 .bar i{
     margin-top: 10%;
+    margin-bottom: 10%;
     opacity: 0.7;
 }
  .sun i , .important i , .calendar i , .user i , .house i{
@@ -112,12 +137,20 @@ hr{
     height: 100vh;
     width: 290px;
     position: relative;
+    transition: width 0.3s ease , padding 0.3s ease;;
 }
+.sideBar.collapsed{
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .options{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 20px;
+    margin:  0 20px;
+    margin-top: 20%;
     gap: 10px;
 }
 .sun , .important , .plan , .assign , .tasks{
@@ -161,6 +194,13 @@ hr{
     display: flex;
     flex-direction: column;
     display: none;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+.dayMainPage.expanded{
+    margin-left: 10px;
+    flex-grow: 1;
+    
 }
 .twoDivs{
     display: flex;
@@ -194,12 +234,20 @@ hr{
     padding:15px 10px ;
     border-radius: 5px;
     border: 1px solid #fff;
+    outline: none;
     
 }
 .threeIcons{
     display: flex;
     gap: 15px;
     
+}
+.add button{
+    background-color: #fff;
+    padding: 2px 5px;
+    outline: none;
+    border: 1px solid #fff;
+    color: #aeabaa;
 }
 
 
@@ -231,3 +279,133 @@ hr{
 
  }
  
+
+ /* MEDIA QUERIES */
+ /* MOBILE PHONES */
+
+ @media (max-width:600px){
+    .navBar{
+        padding: 5px;
+    }
+    
+    .navBar p{
+        font-size: 14px;
+    }
+    .search{
+       width:50% ; 
+    }
+    .search input{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+   
+   .otherIcons{
+        
+        gap: 10px;
+    }
+    .sideBar{
+        width: 100%;
+        height: 80vh;
+       
+    }
+.bar{
+    left: 20px;
+   
+}
+
+.sun, .important , .plan , .assign , .tasks{
+    flex-direction: row;
+    gap: 5px;
+    height: auto;
+    margin-top: 10PX;
+
+}
+.bluePart p{
+    display: none;
+}
+.bottomIcons{
+    display: none;
+}
+.dayMainPage{
+    margin-left: 0;
+}
+.twoDivs{
+    /* flex-direction: column; */
+    width: 100vw;
+    margin: 10px;
+}
+.dayMainPage h4 , .dayMainPage p{
+    display: none;
+
+}
+.firstDiv{
+    margin-left: 20px;
+}
+ .secondDiv{
+    /* gap: 10px; */
+    display: none;
+}
+.input input, .inputTwo{
+    width: 68%;
+    padding: 10px 5px;
+    margin-left: -10px;
+
+}
+.add button{
+    padding: 5px 10px;
+}
+ 
+ }
+
+ /* tablets */
+
+ @media (min-width: 601px) and (max-width:1024px){
+    .navBar{
+        flex-direction: row;
+        margin: 0 2%;
+        
+        padding: 5px;
+    }
+   
+    .search{
+       width:80% ; 
+    }
+    .search input{
+       
+        font-size: 15px;
+    }
+    .otherIcons{
+        flex-direction: row;
+        gap: 15px;
+    }
+    .sideBar{
+        width: 250px;
+        position: relative;
+    }
+.bar{
+    left: 20px;
+   
+}
+
+.sun, .important , .plan , .assign , .tasks{
+    
+    margin-top: 10px;
+    flex-direction: row;
+    gap: 5px;
+    height: auto;
+    margin-top: 10PX;
+
+}
+.bluePart {
+    display: none;
+}
+
+.bottomIcons{
+   display: none;
+}
+.dayMainPage{
+    margin-left: 0px;
+}
+
+
+ }
