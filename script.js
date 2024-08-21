@@ -36,7 +36,7 @@ document.querySelector('.assign').addEventListener('click', function () {
 
 });
 document.querySelector('.tasks').addEventListener('click', function () {
-    // console.log('Tasks clicked');
+    console.log('Tasks clicked');
     showSection('taskContent');
 
 });
