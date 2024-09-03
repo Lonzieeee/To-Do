@@ -1,0 +1,21 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "Cli": "npm:cli@^1.0.1",
+    "firebase": "^10.13.1"
+  },
+  "devDependencies": {
+    "cli": "^1.0.1",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
