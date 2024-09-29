@@ -110,42 +110,80 @@
     </div>
     <div class="dropdown-menu" id="dropdownMenu">
         <h5>List options</h5>
+        <hr>
         <div class="menu-option" id="printOption">
             <i class="fa-solid fa-print"></i>
             <span>Print List</span>
         </div>
     </div>
+    <div class="grid-menu">
         <div class="grid">
-            <i class="lni lni-grid-alt"></i>
+            <i class="lni lni-grid-alt" id="grid"></i>
+            <span class="tooltip">Grid view</span>
+            
             <p>Grid</p>
+           
 
         </div>
+        
+       
+
+    
+        
+    </div>
+    <div class="list-menu">
         <div class="list">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-list" id="list"></i>
+            <span class="tooltip">List view</span>
+            
             <p>List</p>
         </div>
+        
+       
+
+    
+        
+    </div>
+
+    
+
 
 
     </div>
+   
     <div class="secondDiv">
+        <div class="sort-menu">
         <div class="arrows">
             <div class="upDown">
             <i class="fa-solid fa-arrow-up"></i>
             <i class="fa-solid fa-arrow-down"></i>
         </div>
+        <span class="tooltip">Sort</span>
+
         <p>Sort</p>
 
         </div>
+        
+    </div>
+    
+    <div class="group-menu">
 
         <div class="group">
             <i class="fa-regular fa-square"></i>
+            <span class="tooltip">Group</span>
             <p>Group</p>
         </div>
+    </div>
+    <div class="suggestions-menu">
         <div class="suggestion">
             <i class="fa-regular fa-lightbulb"></i>
+            <span class="tooltip">Suggestions</span>
+
             <p>Suggestions</p>
 
         </div>
+    </div>
+        
 
 
        
@@ -159,7 +197,7 @@
  </div>
  <div class="twoParts">
     <div class="input">
-        <input type="text"  placeholder="Add a Task">
+        <input type="text"  placeholder="Add a Task" oninput="toggleAddButton()">
     </div>
     <div class="inputTwo">
     <div class="threeIcons">
@@ -171,10 +209,11 @@
 
     </div>
     <div class="add">
-        <button>Add</button>
+        <button id="addButton" onclick="addTask()" disabled>Add</button>
     </div>
 </div>
  </div>
+ <div id="taskList"></div>
     
 
 

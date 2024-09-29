@@ -102,6 +102,39 @@ const searchInput = document.getElementById('searchInput');
      });
 
 
+     function toggleAddButton() {
+        const input = document.getElementById('taskInput');
+        const addButton = document.getElementById('addButton');
+        addButton.disabled = !input.value.trim(); // Enable button if input has text
+    }
+    
+    function addTask() {
+        const input = document.getElementById('taskInput');
+        const taskText = input.value.trim();
+        if (!taskText) return; // Do nothing if there's no text
+    
+        const taskList = document.getElementById('taskList');
+        
+        // Create task item
+        const taskItem = document.createElement('div');
+        taskItem.className = 'task';
+        taskItem.innerHTML = `
+            <span>${taskText}</span>
+            <button onclick="deleteTask(this)">Delete</button>
+        `;
+        taskList.appendChild(taskItem);
+        
+        input.value = ''; // Clear input
+        toggleAddButton(); // Update button state
+    }
+    
+    function deleteTask(button) {
+        const taskItem = button.parentElement;
+        taskItem.remove(); // Remove the task item
+    }
+    
+
+
 });
 
 

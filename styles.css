@@ -246,12 +246,12 @@ hr{
     position: relative;
 
 }
-.ellipsis-menu{
+.ellipsis-menu, .grid-menu ,.list-menu,.sort-menu, .group-menu, .suggestions-menu {
     display: inline-block;
     position: relative;
 
 }
-#ellipsis{
+#ellipsis, #grid{
     cursor: pointer;
 }
 .tooltip{
@@ -272,58 +272,83 @@ hr{
     font-size: 12px;
 
 }
-.ellipsis-menu:hover .tooltip{
+.ellipsis-menu:hover .tooltip , .grid-menu:hover .tooltip, .list-menu:hover .tooltip, .sort-menu:hover  .tooltip, .group-menu:hover .tooltip, .suggestions-menu:hover .tooltip {
     visibility: visible;
     opacity: 1;
 
 }
+
 .dropdown-menu{
+   
+  
     display: none;
     position: absolute;
     top:30px;
-    right: 0;
+    left: 30px;
     background-color: white;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 10px 40px;
     z-index: 1000;
 }
 .dropdown-menu h5{
     margin: 0;
     padding: 5px;
     font-size: 14px;
-    border-bottom: 1px solid #ddd;
+ 
+    
+    
 
 }
+.dropdown-menu hr{
+   margin:0 -38px ;
+padding: 0;
+   
+
+}
+
 .menu-option{
     display: flex;
     align-items: center;
-    padding: 5px;
+    
     cursor: pointer;
+    background-color: #f0f0f0;
+    width: 100%;
 }
 .menu-option i{
     margin-right: 10px;
 }
-.menu-option:hover{
-    background-color: #f0f0f0;
-}
+
 
  .secondDiv{
     display: flex;
     gap:20px;
 }
-.list , .grid , .arrows , .group ,.suggestion{
+.grid , .arrows , .group ,.suggestion{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px; ;
+    gap: 10px; 
+    cursor: pointer;
 }
+.list {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    cursor: pointer;
+   
+    gap: 10px; 
+    border-bottom: 3px solid #605E5C;
+    border-radius: 3%;
+}
+
 .twoParts{
     display: flex;
     flex-direction: column;
     margin: 20px 30px;
     gap: 3px;
 }
+
 .input input{
     width: 100%;
     padding:15px 10px ;
@@ -332,6 +357,7 @@ hr{
     outline: none;
     
 }
+
 .threeIcons{
     display: flex;
     gap: 15px;
@@ -343,7 +369,38 @@ hr{
     outline: none;
     border: 1px solid #fff;
     color: #aeabaa;
+    position: relative;
+    cursor: pointer;
 }
+.add button:hover::after{
+    content: '\f05e'; 
+    position: absolute;
+      font-family: "Font Awesome 5 Solid";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red; 
+    font-size: 14px; 
+}
+.add button:disabled {
+    opacity: 0.5; 
+    cursor: not-allowed;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.task button {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
 
 
 .inputTwo{
