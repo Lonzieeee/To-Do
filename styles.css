@@ -246,7 +246,7 @@ hr{
     position: relative;
 
 }
-.ellipsis-menu, .grid-menu ,.list-menu,.sort-menu, .group-menu, .suggestions-menu {
+.ellipsis-menu, .grid-menu ,.list-menu,.sort-menu, .group-menu, .suggestions-menu , .ellipsis-menu-2 {
     display: inline-block;
     position: relative;
 
@@ -272,7 +272,7 @@ hr{
     font-size: 12px;
 
 }
-.ellipsis-menu:hover .tooltip , .grid-menu:hover .tooltip, .list-menu:hover .tooltip, .sort-menu:hover  .tooltip, .group-menu:hover .tooltip, .suggestions-menu:hover .tooltip {
+.ellipsis-menu:hover .tooltip , .grid-menu:hover .tooltip, .list-menu:hover .tooltip, .sort-menu:hover  .tooltip, .group-menu:hover .tooltip, .suggestions-menu:hover .tooltip, .ellipsis-menu-2:hover .tooltip{
     visibility: visible;
     opacity: 1;
 
@@ -324,14 +324,14 @@ padding: 0;
     display: flex;
     gap:20px;
 }
-.grid , .arrows , .group ,.suggestion{
+.grid , .arrows , .group ,.suggestion,  .grid-2{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px; 
     cursor: pointer;
 }
-.list {
+.list, .important-list {
     display: flex;
     align-items: center; 
     flex-direction: row;
@@ -421,8 +421,14 @@ padding: 0;
 }
 
  /* MAIN PAGE IMPORTANT  */
+ .grid-2 i,.ellipsis-menu-2 i{
+    color: #2564CF;
+ }
+ .important-list{
+    border-bottom: 3px solid  #2564CF;
 
- #importantContent h4 , #importantContent p , #secondStar,#secondEllipsis ,#secondList , #secondArrow , #secondCalendar ,#secondUser, #secondHouse , #plannedContent p , #plannedContent h4{
+ }
+ #importantContent h4 , #importantContent p , #secondStar,#secondEllipsis ,#secondList , #secondArrow , #secondCalendar ,#secondUser, #secondHouse , #plannedContent p , #plannedContent h4, .important-list{
     color:#2564CF;
 
  }

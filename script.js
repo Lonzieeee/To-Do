@@ -101,7 +101,9 @@ const searchInput = document.getElementById('searchInput');
         }
      });
 
-
+     const taskInput = document.getElementById('taskInput');
+     taskInput.addEventListener('input', toggleAddButton);
+     
      function toggleAddButton() {
         const input = document.getElementById('taskInput');
         const addButton = document.getElementById('addButton');
@@ -128,10 +130,10 @@ const searchInput = document.getElementById('searchInput');
         toggleAddButton(); // Update button state
     }
     
-    function deleteTask(button) {
-        const taskItem = button.parentElement;
-        taskItem.remove(); // Remove the task item
-    }
+    // function deleteTask(button) {
+    //     const taskItem = button.parentElement;
+    //     taskItem.remove(); // Remove the task item
+    // }
     
 
 

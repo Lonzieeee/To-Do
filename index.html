@@ -197,7 +197,7 @@
  </div>
  <div class="twoParts">
     <div class="input">
-        <input type="text"  placeholder="Add a Task" oninput="toggleAddButton()">
+        <input type="text" id="taskInput" placeholder="Add a Task" oninput="toggleAddButton()">
     </div>
     <div class="inputTwo">
     <div class="threeIcons">
@@ -227,14 +227,44 @@
     <div class="firstDiv">
         <i class="fa-regular fa-star" id="secondStar"></i>
        <a href="/important/index.html"> <h4 id="mainH4">Important</h4> </a>
-        <i class="fa-solid fa-ellipsis" id="secondEllipsis"></i>
-        <div class="grid">
-            <p>Grid</p>
 
+
+       <div class="ellipsis-menu-2">
+        <i class="fa-solid fa-ellipsis" id = "ellipsis"></i>
+        <span class="tooltip">List options menu</span>
+
+    </div>
+    
+
+
+
+        <div class="grid-menu">
+            <div class="grid-2">
+                <i class="lni lni-grid-alt" id="grid"></i>
+                <span class="tooltip">Grid view</span>
+                
+                <p>Grid</p>
+               
+    
+            </div>
+            
+           
+    
+        
+            
         </div>
-        <div class="list">
-            <i class="fa-solid fa-list" id="secondList"></i>
-            <p>List</p>
+        <div class="list-menu">
+            <div class="important-list">
+                <i class="fa-solid fa-list" id="list"></i>
+                <span class="tooltip">List view</span>
+                
+                <p>List</p>
+            </div>
+            
+           
+    
+        
+            
         </div>
 
 
