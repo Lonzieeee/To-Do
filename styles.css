@@ -272,7 +272,7 @@ hr{
     font-size: 12px;
 
 }
-.ellipsis-menu:hover .tooltip , .grid-menu:hover .tooltip, .list-menu:hover .tooltip, .sort-menu:hover  .tooltip, .group-menu:hover .tooltip, .suggestions-menu:hover .tooltip, .ellipsis-menu-2:hover .tooltip{
+.ellipsis-menu:hover .tooltip , .grid-menu:hover .tooltip, .list-menu:hover .tooltip, .sort-menu:hover  .tooltip, .group-menu:hover .tooltip, .suggestions-menu:hover .tooltip, .ellipsis-menu-2:hover .tooltip ,.ellipsis-menu-3:hover .tooltip {
     visibility: visible;
     opacity: 1;
 
@@ -324,14 +324,14 @@ padding: 0;
     display: flex;
     gap:20px;
 }
-.grid , .arrows , .group ,.suggestion,  .grid-2{
+.grid , .arrows , .group ,.suggestion,  .grid-2,  .grid-3 {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px; 
     cursor: pointer;
 }
-.list, .important-list {
+.list, .important-list,.assigned-list {
     display: flex;
     align-items: center; 
     flex-direction: row;
@@ -428,11 +428,18 @@ padding: 0;
     border-bottom: 3px solid  #2564CF;
 
  }
+ .assigned-list{
+    border-bottom: 3px solid  #457e21;
+
+
+ }
  #importantContent h4 , #importantContent p , #secondStar,#secondEllipsis ,#secondList , #secondArrow , #secondCalendar ,#secondUser, #secondHouse , #plannedContent p , #plannedContent h4, .important-list{
     color:#2564CF;
 
  }
- #greenUser , #greenEllipsis , #greenList , #assignedContent h4,  #assignedContent p {
+
+ #greenUser , #greenEllipsis , #greenList , #assignedContent h4,  #assignedContent p,  .grid-3 i ,  
+ .assigned-list i , .ellipsis-menu-3 i {
     color: #457e21;
 
  }
