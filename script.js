@@ -18,28 +18,43 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'flex';// This finds the html element with the matching id 'sectionId' and makes it visible
     
 }
+// Function to handle the active state of sidebar options
+function setActiveOption(element) {
+    // Remove the 'active' class from all options
+    document.querySelectorAll('.options div').forEach(function(option) {
+        option.classList.remove('active');
+    });
+    // Add the 'active' class to the clicked element
+    element.classList.add('active');
+}
 
 // Event listeners for all 
 document.querySelector('.sun').addEventListener('click', function () {
+    setActiveOption(this);
     showSection('myDayContent');
 
 });
 document.querySelector('.important').addEventListener('click', function () {
+    setActiveOption(this);
     showSection('importantContent');
 
 });
 document.querySelector('.plan').addEventListener('click', function () {
+    setActiveOption(this);
     showSection('plannedContent');
 
 });
 document.querySelector('.assign').addEventListener('click', function () {
+    setActiveOption(this);
     showSection('assignedContent');
     
 
 
 });
 document.querySelector('.tasks').addEventListener('click', function () {
+    
     console.log('Tasks clicked');
+    setActiveOption(this);
     showSection('taskContent');
 
 });
@@ -73,6 +88,18 @@ const searchInput = document.getElementById('searchInput');
             content.classList.toggle('expanded');
         });
     });
+
+
+
+    // SHOW/HIDE THE DROPDOWN MENU (ELLIPSES)
+     document.getElementById('ellipsis').addEventListener('click', function(){
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === ''){
+            dropdownMenu.style.display = 'block';
+        }else{
+            dropdownMenu.style.display = 'none';
+        }
+     });
 
 
 });
